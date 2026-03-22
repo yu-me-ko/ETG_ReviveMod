@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7469583B-4B99-463C-B4FB-5ABC190A3D43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReviveModTest</RootNamespace>
+    <AssemblyName>ReviveModTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ReviveSystem.cs" />
+    <Compile Include="ReviveMod.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\..\AppData\Roaming\r2modmanPlus-local\ETG\profiles\mods\BepInEx\core\BepInEx.dll" />
+    <Analyzer Include="..\..\..\..\AppData\Roaming\r2modmanPlus-local\ETG\profiles\mods\BepInEx\core\BepInEx.Harmony.dll" />
+    <Analyzer Include="F:\SteamLibrary\steamapps\common\Enter the Gungeon\EtG_Data\Managed\Assembly-CSharp.dll" />
+    <Analyzer Include="F:\SteamLibrary\steamapps\common\Enter the Gungeon\EtG_Data\Managed\UnityEngine.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>F:\SteamLibrary\steamapps\common\Enter the Gungeon\EtG_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\..\AppData\Roaming\r2modmanPlus-local\ETG\cache\BepInEx-BepInExPack_EtG\5.4.2101\BepInExPack_EtG\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="ModTheGungeonAPI">
+      <HintPath>..\..\..\..\AppData\Roaming\r2modmanPlus-local\ETG\profiles\mods\BepInEx\plugins\MtG_API-Mod_the_Gungeon_API\MtGAPI\ModTheGungeonAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>F:\SteamLibrary\steamapps\common\Enter the Gungeon\EtG_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>F:\SteamLibrary\steamapps\common\Enter the Gungeon\EtG_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
