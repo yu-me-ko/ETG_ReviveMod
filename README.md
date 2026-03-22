@@ -57,7 +57,7 @@ BepInEx/plugins/
 
 # Revive Mod
 
-A gameplay mod that enhances the revive system with new mechanics and visual feedback.
+A gameplay mod that allow you to revive your dead friend in cooperation mode.
 
 ## ✨ Features
 
